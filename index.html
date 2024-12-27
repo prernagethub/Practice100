@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 1. Sum of two integers............................
+    let c = 12;
+    let d = 23;
+    console.log(`${c + d}`);
+
+
+    // 2- Print the messege along with values and sum............
+    let e = 34;
+    let f = 23;
+    console.log(`The sum of ${e} & ${f} = ${e + f}`);
+
+
+
+    // 3- Accept two integers from user and print the sum
+    // Ex - The sum of 45 & 12 = 57
+    // let a = +prompt("enter the num1");
+    // let b = +prompt("enter the num1");
+    // console.log(`The sum of ${a} & ${b} = ${a + b}`);
+
+    // 4- Accept the User's name, age and print in following.manner
+    // Ex - Hello Shery, you are 12 years old...................................
+    // let age = prompt("Age");
+    // let name = prompt("Name");
+    // console.log(`Hello ${name}, you are ${age} years old`);
+
+
+    // 6- Accept two numbers from user and swap their values.................
+
+    let n1 = 12;
+    let n2 = 23;
+
+    let swap = n1;
+    n1 = n2;
+    n2 = swap;
+    console.log(`${n1}, ${n2}`);
+
+    // Part 2 - Swap without using third variable........
+
+    let n3 = 10;
+    let n4 = 20;
+
+    n3 = n3 + n4; //10 = 10+20 = 30;
+    n4 = n3 - n4;  //30 - 20 = 10;
+    n3 = n3 - n4;  //30 - 10 = 20;
+    console.log(`${n3},${n4}`);
+
+    n3 = n3 * n4; //10 = 10*20 = 200;
+    n4 = n3 / n4;  //200 / 20 = 10;
+    n3 = n3 / n4;  //200 / 10 = 20;
+    // console.log(`${n3},${n4}`);
+
+
+    //7- Accept the length and width of a rectangle. Calculate & print the area and perimiter...
+
+    // let length = Number(prompt("enter length"));
+    // let width = Number(prompt("enter Width"));
+    // console.log(`Area of rectangle is ${length * width}`);
+    // console.log(`Perimeter of rectangle is ${2 * (length + width)}`);
+
+    // 8- Accept the parameters and calculate the Compound Interest & print it on STDOUT (Use Math class methods)..............
+
+    // 9- Accept the three sides of triangle and calculate the area using herons formula...........
+
+    function calculateTriangleArea(a, b, c) {
+      // Calculate semi-perimeter
+      const s = (a + b + c) / 2;
+
+      // Calculate area using Heron's formula
+      const area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+
+      // Return the area
+      return area;
+    }
+
+    // Example usage
+    const side1 = 5;
+    const side2 = 6;
+    const side3 = 7;
+
+    const area = calculateTriangleArea(side1, side2, side3);
+    console.log(`The area of the triangle is: ${area.toFixed(2)} square units`);
+
+    //10. Find surface area of sphere................
+
+    function sphere(radius, pi = 3.14) {
+      const area = 4 * pi * radius ** 2;
+      return area;
+    }
+
+    const areaa = sphere(5);
+    console.log(areaa);
+
+    //11. Find circumference and area of circle.........
+
+
+    //12- Accept two numbers and print the greatest between them.........................
+
+    // let A = Number(prompt("enter A"));
+    // let B = Number(prompt("enter B"));
+    // if (A > B) {
+    //   console.log(`${A}`);
+    // } else {
+    //   console.log(`${B}`);
+    // }
+
+
+    //13- Accept the gender from the user as char and print the respective greeting message
+    // Ex - Good Morning Sir (on the basis of gender)...............
+
+    // let Gender = prompt("M/F");
+    // if (Gender == "M") {
+    //   console.log("Good morning bhaiya");
+
+    // } else if (Gender == "F") {
+    //   console.log("Good morning ma'am");
+
+    // } else {
+    //   console.log("wrong input");
+
+    // }
+
+
+    //15- Accept an integer and check whether it is an even number or odd................
+
+    // let check = +prompt("enter number: ");
+    // if (check % 2 == 0) {
+    //   console.log("Even number");
+
+    // } else {
+    //   console.log("Odd number");
+
+    // }
+
+    // console.log(check % 2 == 0 ? "Even" : "Odd");
+
+    //16- Accept name and age from the user. Check if the user is a valid voter or not.
+    //Vaid - Hello Shery, You are a valid voter.
+    //Invalid - Sorry Shery, you can't cast the vote.
+    //Part 2 - Print after how many years the user will be eligible................................
+
+
+    // let Name = prompt("Enter your Name: ");
+    // let age = +prompt("Enter Your Age:");
+
+    // if (age >= 18) {
+    //   console.log(`Hello ${Name}, you are a valid voter`);
+
+    // } else {
+    //   console.log(`Sorry ${Name}, you can't cast the vote. but after ${18 - age} years you will cast vote.`);
+
+    // }
+
+    //17 - Accept a day number between 1 - 7 and print the corresponding dayname.
+    // let dayNumber = +prompt("enter number :");
+
+    // switch (dayNumber) {
+    //   case 1:
+    //     console.log("monday");
+
+    //     break;
+    //   case 2:
+    //     console.log("TUES");
+    //     break;
+    //   case 3:
+    //     console.log("WED");
+    //     break;
+    //   case 4:
+    //     console.log("TH");
+    //     break;
+    //   case 5:
+    //     console.log("FR");
+    //     break;
+    //   case 6:
+    //     console.log("SA");
+    //     break;
+    //   case 7:
+    //     console.log("SU");
+    //     break;
+
+    //   default:
+    //     console.log("WORNG");
+    //     break;
+    // }
+
+
+    //18- Accept three numbers and print the greatest among them....
+
+    let nm1 = 82;
+    let nm2 = 53;
+    let nm3 = 45;
+
+    if (nm2 > nm1) {
+      if (nm2 > nm3) {
+        console.log("nm2 is greater");
+
+      } else {
+        console.log("nm3 is greater");
+
+      }
+    } else {
+      console.log("nm1 is greater");
+
+    }
+
+
+    //19- Accept a year and check if it a leap year or not (google to find out what's a leap year)..............
+
+    let year = 1990;
+
+    if (year % 4 == 0) {
+      if (year !== 100 && year % 400 == 0) {
+        console.log("its a leap year");
+      }
+
+    } else {
+      console.log("not a leap year");
+    }
+
+    //22- Accept an english alphabet from user and check if it is a consonent or a vowel;..................
+
+    // let alphabet = prompt("Enter the Word : ");
+
+    // if (alphabet == "a") {
+    //   console.log("vowel");
+
+    // } else if (alphabet == "o") {
+    //   console.log("vowel");
+    // }
+    // else if (alphabet == "i") {
+    //   console.log("vowel");
+    // }
+    // else if (alphabet == "e") {
+    //   console.log("vowel");
+    // }
+    // else if (alphabet == "u") {
+    //   console.log("vowel");
+    // } else {
+    //   console.log("consonant");
+
+    // }
+
+    let i = 5;
+    let arr = ["a", "i", "o", "u", "e"];
+    console.log(arr[i - 1]);
+
+    //23- Accept an integer and Print hello world n times........
+
+    let integer = +prompt("enter number : ");
+    for (i = 1; i <= integer; i++) {
+      console.log("hello world");
+
+    }
+
+    //24- Print natural number up to n.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>
